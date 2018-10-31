@@ -1,53 +1,44 @@
 package com.keepwalking.model.response;
 
-import com.keepwalking.model.Links;
+
+import java.time.LocalDate;
 
 public class ReservationResponse {
 
     private Long id;
-    private Integer roomNumber;
-    private Integer price;
-    private Links links;
-
+    private LocalDate checkin;
+    private LocalDate checkout;
 
     public ReservationResponse() {
     }
 
-    public ReservationResponse(Integer roomNumber, Integer price) {
-        this.roomNumber = roomNumber;
-        this.price = price;
-    }
-
-    public void setId(Long id) {
+    public ReservationResponse(Long id, LocalDate checkin, LocalDate checkout) {
         this.id = id;
-    }
-
-    public void setRoomNumber(Integer roomNumber) {
-        this.roomNumber = roomNumber;
-    }
-
-    public void setPrice(Integer price) {
-        this.price = price;
-    }
-
-    public void setLinks(Links links) {
-        this.links = links;
+        this.checkin = checkin;
+        this.checkout = checkout;
     }
 
     public Long getId() {
         return id;
     }
 
-    public Integer getRoomNumber() {
-        return roomNumber;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public Integer getPrice() {
-        return price;
+    public LocalDate getCheckin() {
+        return checkin;
     }
 
-    public Links getLinks() {
-        return links;
+    public void setCheckin(LocalDate checkin) {
+        this.checkin = checkin;
     }
 
+    public LocalDate getCheckout() {
+        return checkout;
+    }
+
+    public void setCheckout(LocalDate checkout) {
+        this.checkout = checkout;
+    }
 }

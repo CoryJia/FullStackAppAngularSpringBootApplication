@@ -5,7 +5,6 @@ import com.keepwalking.Repository.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-
 @Component
 public class H2Bootstrap implements CommandLineRunner {
 
@@ -26,7 +25,7 @@ public class H2Bootstrap implements CommandLineRunner {
 
         System.out.println("Printing out data: ");
         for(RoomEntity room : itr) {
-            System.out.println(room.getRoomNumber() + " " + room.getPrice());
+            System.out.println(room.getRoomNumber());
         }
     }
 
